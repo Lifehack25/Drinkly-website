@@ -1,0 +1,342 @@
+@font-face {
+  font-family: 'cortado';
+  src: url('fonts/cortado.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'arial-rounded';
+  src: url('fonts/arial-rounded.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'futura';
+  src: url('fonts/futura.ttf') format('truetype');
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #FFCF64, 0 0 10px #FFCF64, 0 0 15px #FFCF64, 0 0 20px #FFCF64;
+  }
+  100% {
+    box-shadow: 0 0 10px #FFCF64, 0 0 20px #FFCF64, 0 0 30px #FFCF64, 0 0 40px #FFCF64;
+  }
+}
+@keyframes fade-up {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+html, body, div, h1, h2, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.background-container {
+  position: relative;
+  background-image: url("images/background1.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 1400px;
+  width: 2560px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Navigation Bar Styling */
+.navigation-bar {
+  animation: slide-in-top 0.8s ease-out forwards;
+  position: absolute;
+  left: 0%;
+  display: flex;
+  justify-content: center; /* Horizontal center alignment */
+  width: 100%;
+  height: 100px;
+  margin-top: 12px;
+  font-family: cortado;
+  font-size: 30px;
+}
+.navigation-bar ul {
+  display: flex;
+  justify-content: space-between;
+  width: 30%; /* Adjust this value as needed, depending on how much of the row you want the navbar to occupy */
+}
+.navigation-bar li {
+  margin: 0 10px; /* This will give a 20px space between the elements as each element will have 10px margin on both sides */
+}
+.navigation-bar a {
+  margin: 0 2px; /* Adjust this value to get the icons as close as you want */
+  padding-top: 0; /* Remove the padding from the icons */
+  line-height: normal; /* Reset the line height for the icons */
+}
+/* Link Styling */
+.navigation-bar a {
+  text-decoration: none; /* To remove the underline from the links */
+  color: yellow; /* Change this color as per your design */
+  transition: color 0.2s linear; /* This will add the transition effect */
+  padding-top: 10px;
+  line-height: 1.5; /* Adjust this value as needed */
+}
+.navigation-bar a:hover {
+  color: rgb(255, 115, 0); /* Change this color to the color you want on hover */
+}
+.navigation-bar a:hover img {
+  filter: brightness(70%) sepia(1) hue-rotate(-10deg) saturate(700%) contrast(85%);
+}
+.social-media-icons {
+  position: absolute;
+  left: 69.5%;
+  top: 11px;
+  display: flex;
+  justify-content: space-between;
+  width: 88px; /* Adjust this value as needed */
+  animation: slide-in-top 0.8s ease-out forwards;
+}
+.icon-container {
+  width: 40px; /* Adjust the size of the icons as required */
+}
+.icon-container a {
+  display: block;
+  transition: filter 0.2s linear;
+}
+.icon-container a:hover {
+  filter: brightness(70%) sepia(1) hue-rotate(-10deg) saturate(700%) contrast(85%);
+}
+.icon-container img {
+  width: 100%;
+  height: auto;
+}
+.homepage {
+  visibility: hidden;
+}
+.drinkly-title, .grid-container1, .grid-container2, .p1, .p2, .h3 {
+  animation: slide-in 0.8s ease-out forwards;
+}
+.drinkly-title {
+  font-weight: 1;
+  color: yellow;
+  position: absolute;
+  font-family: cortado;
+  font-size: 125px;
+  left: 740px;
+  top: 5%;
+  text-shadow: 4px 4px 4px #000000; 
+}
+.p1, .p2 {
+  position: absolute;
+  font-family: arial-rounded;
+  color: white;
+  left: 740px;
+}
+.p1 {
+  font-size: 38px;
+  top: 17.5%;
+  width: 300px;
+  line-height: 48px;
+}
+.p2 {
+  font-size: 18px;
+  top: 30%;
+  width: 290px;
+}
+.qr-code {
+  position: absolute;
+  top: 37%;
+  left: 800px;
+  border-radius: 20px;
+  animation: slide-in 0.8s ease-out forwards, glow 1.5s infinite alternate;
+}
+.grid-container1, .grid-container2 {
+  position: absolute;
+  left: 740px;
+  display: grid;
+  grid-template-columns: 50px 300px;
+}
+.grid-container1 {
+  top: 52%;
+}
+.grid-container2 {
+  top: 63%;
+}
+.fireicon, .lightbulb {
+  display: inline-block;
+  margin-top: 14px;
+}
+.p3, .p5 {
+  font-family: futura;
+  color: rgb(255, 207, 100);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.p4, .p6 {
+  font-family: arial-rounded;
+  color: white;
+  font-size: 17px;
+}
+.app-reviews {
+  animation: fade-up 0.8s ease-out forwards;
+  position: absolute;
+  left: 47.4%;
+  top: 1094px;
+  color: white;
+  font-family: arial-rounded;
+}
+.app-store, .google-play, .hamburger {
+  display: none;
+}
+.navigation-bar a:active {
+  color: #FFCF64;
+}  
+.navigation-bar a.current {
+  color: #FFCF64;
+}
+/* 
+==================================================
+MOBILE STYLES
+Start of styles for screen widths 768px and below 
+==================================================
+*/
+@media (max-width: 768px) {
+  /* Change the background image and ensure it covers the viewport */
+  .app-reviews, .qr-code, .p2, .grid-container1, .grid-container2 {
+    display: none;
+  }
+  .background-container {
+    background-image: url("images/mobile-background.png"); /* replace with your mobile background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure the container covers the entire viewport height */
+    width: 100vw; /* Ensure the container covers the entire viewport width */
+    left: 0;
+    transform: none;
+  }
+  /* Hide the desktop navigation */
+  .navigation-bar {
+    display: none;
+    position: fixed; /* Fixed position */
+    top: -1.2%; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full viewport width */
+    height: 23%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center; /* Center the text */
+    z-index: 9998;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+  }
+  .navigation-bar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* This will make your list items stretch to take up the full width */
+    width: 100%;
+    margin-top: -30px;
+  }
+  .navigation-bar ul li {
+    padding: 10px 0; /* Add some vertical padding */
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    z-index: 9999;
+    animation: slide-in-top 0.8s ease-out forwards;
+  }
+  #animatedButton {
+    background-color: Transparent;
+    border: none;
+    width: 35px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #animatedButton div {
+    width: 35px;
+    height: 5px;
+    background-color: #FFCF64;
+    transition: 0.3s;
+    border-radius: 10px;
+  }
+  .cross #bar1 {
+    transform: rotate(-45deg) translate(-8px, 7px);
+  }
+  .cross #bar2 {
+    opacity: 0;
+  }
+  .cross #bar3 {
+    transform: rotate(45deg) translate(-7px, -6px);
+  }  
+  /* Center the Drinkly title */
+  .drinkly-title {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    left: 28%;
+    margin-top: -20px;
+    animation: slide-in-top 0.8s ease-out forwards;
+    text-shadow: 2px 2px 2px #000000; 
+  }
+  /* Stack social icons vertically and adjust their position */
+  .social-media-icons {
+    position: absolute;
+    left: 4%; /* adjust as needed */
+    top: 2%; /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    width: 60px; /* adjust as needed */
+  }
+  .icon-container {
+    margin-bottom: 8px; /* adjust as needed to add space between icons */
+  }
+  .icon-container img {
+    width: 100%;  /* adjust this as per your requirement */
+    height: auto; /* adjust this as per your requirement */
+    object-fit: contain;
+  }
+  .p1 {
+    top: 130px;
+    left: 4%;
+  }
+  .app-store, .google-play {
+    display: block;
+    position: absolute;
+    left: 4%;
+    animation: fade-up 0.8s ease-out forwards, glow 1.5s infinite alternate;
+    border-radius: 10px;
+  }
+  .app-store {
+    top: 78%;
+  }
+  .google-play {
+    top: 88%;
+  }  
+
+}

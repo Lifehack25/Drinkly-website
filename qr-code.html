@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App Download</title>
+</head>
+<body>
+    <script>
+    window.onload = function() {
+        var ua = navigator.userAgent.toLowerCase();
+        var isAndroid = ua.indexOf("android") > -1;
+        var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+        if(isAndroid) {
+            window.location.href = 'https://play.google.com/store/apps/details?id=com.example.app';
+        }
+        else if(isiOS) {
+            window.location.href = 'https://apps.apple.com/app/apple-store/idXXXXXXXXX';
+        }
+        else {
+            document.write('Your device is not supported.');
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'cortado';
+  src: url('fonts/cortado.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'arial-rounded';
+  src: url('fonts/arial-rounded.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'futura';
+  src: url('fonts/futura.ttf') format('truetype');
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-up {
+  0% {
+    transform: translateY(5%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #FFCF64, 0 0 10px #FFCF64, 0 0 15px #FFCF64, 0 0 20px #FFCF64;
+  }
+  100% {
+    box-shadow: 0 0 10px #FFCF64, 0 0 20px #FFCF64, 0 0 30px #FFCF64, 0 0 40px #FFCF64;
+  }
+}
+html, body, div, h1, h2, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.background-container {
+  position: relative;
+  background-image: url("images/story-background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 1300px;
+  width: 2560px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Navigation Bar Styling */
+.navigation-bar {
+  animation: slide-in-top 0.8s ease-out forwards;
+  display: flex;
+  justify-content: center; /* Horizontal center alignment */
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  font-family: cortado;
+  font-size: 30px;
+}
+.navigation-bar ul {
+  display: flex;
+  justify-content: space-between;
+  width: 38%; /* Adjust this value as needed, depending on how much of the row you want the navbar to occupy */
+}
+.navigation-bar li {
+  margin: 0 10px; /* This will give a 20px space between the elements as each element will have 10px margin on both sides */
+}
+.navigation-bar .icons a {
+  margin: 0 2px; /* Adjust this value to get the icons as close as you want */
+}
+/* Link Styling */
+.navigation-bar a {
+  text-decoration: none; /* To remove the underline from the links */
+  color: yellow; /* Change this color as per your design */
+  transition: color 0.2s linear; /* This will add the transition effect */
+}
+.navigation-bar a:hover {
+  color: rgb(255, 115, 0); /* Change this color to the color you want on hover */
+}
+.navigation-bar img {
+  height: 40px; /* Adjust the size of the icon images as required */
+  width: auto;
+  transition: filter 0.2s linear;
+}
+.navigation-bar a:hover img {
+  filter: brightness(70%) sepia(1) hue-rotate(-10deg) saturate(700%) contrast(85%);
+}
+.whatis-title {
+  position: absolute;
+  font-family: cortado;
+  color: yellow;
+  font-weight: 1;
+  font-size: 70px;
+  margin-left: 270px;
+}
+.text-container {
+  animation: fade-up 0.8s ease-out forwards;
+  display: grid;
+  position: absolute;
+  width: 1000px;
+  left: 31%;
+  top: 250px;
+}
+.p1, .p2, .p3 {
+  color: white;
+  font-family: arial-rounded;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+.p1 {
+  margin-top: 200px;
+}
+.p3 {
+  text-align: center;
+}
+.navigation-bar a:active {
+  color: rgb(255, 115, 0);
+}  
+.navigation-bar a.current {
+  color: rgb(255, 115, 0);
+}
+.qr-code {
+  margin-left: 400px;
+  margin-top: 30px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  animation: slide-in 0.8s ease-out forwards, glow 1.5s infinite alternate;
+}
+.hamburger, .header-mobile, .text-container-mobile {
+  display: none;
+}
+/* 
+==================================================
+MOBILE STYLES
+Start of styles for screen widths 768px and below 
+==================================================
+*/
+@media (max-width: 768px) {
+
+  .facebook-icon, .instagram-icon, .text-container, .what-is-drinkly {
+    display: none;
+  }
+  .background-container {
+    background-image: url("images/mobile-background2.png"); /* replace with your mobile background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1070px;
+    width: 100vw; /* Ensure the container covers the entire viewport width */
+    left: 0;
+    transform: none;
+  }
+  .text-container-mobile {
+    display: inline-block;
+    padding: 0 7%;
+  }
+  .whatis-title-mobile {
+    font-family: cortado;
+    font-weight: 1;
+    color: yellow;
+    position: relative;
+    left: 1%;
+    margin-top: 35%;
+    font-size: 40px;
+    text-align: center;
+  }
+  p {
+    margin-bottom: 30px;
+    color: azure;
+    font-family: arial-rounded;
+    font-size: 18px;
+  }
+  .p1-mobile {
+    margin-top: 60px;
+  }
+
+  .p6-mobile {
+    text-align: center;
+  }
+
+  .whatis-title-mobile, p {
+    animation: fade-up 1s ease-out forwards;
+  }
+  .app-store, .google-play {
+    display: inline-block;
+    position: absolute;
+    top: 87%;
+    animation: fade-up 1s ease-out forwards, glow 1.5s infinite alternate;
+    border-radius: 10px;
+    height: 50px;
+    width: auto;
+  }
+  .app-store {
+    left: 6%;
+  }
+  .google-play {
+    left: 53%;
+  }
+   /* Hide the desktop navigation */
+   .navigation-bar {
+    display: none;
+    position: fixed; /* Fixed position */
+    top: -1.2%; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full viewport width */
+    height: 23%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center; /* Center the text */
+    z-index: 9998;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    margin-top: 0;
+  }
+  .navigation-bar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* This will make your list items stretch to take up the full width */
+    width: 100%;
+    margin-top: 50px;
+  }
+  .navigation-bar ul li {
+    margin-bottom: -5px;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    z-index: 9999;
+    animation: slide-in-top 0.8s ease-out forwards;
+  }
+  .hamburger img {
+    width: 33px;  /* adjust this as per your requirement */
+    height: 33px; /* adjust this as per your requirement */
+    display: inline-block;
+  }
+  #animatedButton {
+    background-color: Transparent;
+    border: none;
+    width: 35px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #animatedButton div {
+    width: 35px;
+    height: 5px;
+    background-color: #FFCF64;
+    transition: 0.3s;
+    border-radius: 10px;
+  }
+  .cross #bar1 {
+    transform: rotate(-45deg) translate(-8px, 7px);
+  }
+  .cross #bar2 {
+    opacity: 0;
+  }
+  .cross #bar3 {
+    transform: rotate(45deg) translate(-7px, -6px);
+  }
+
+}
