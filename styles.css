@@ -164,7 +164,7 @@ html, body, div, h1, h2, p, ul, li, a {
 .qr-code {
   position: absolute;
   top: 37%;
-  left: 800px;
+  left: 810px;
   border-radius: 20px;
   animation: slide-in 0.8s ease-out forwards, glow 1.5s infinite alternate;
 }
