@@ -101,6 +101,7 @@ html, body, div, h1, h2, p, ul, li, a {
   font-weight: 1;
   font-size: 70px;
   margin-left: 270px;
+  text-shadow: 3px 3px 3px #000000;
 }
 .text-container {
   animation: fade-up 0.8s ease-out forwards;
@@ -172,6 +173,7 @@ Start of styles for screen widths 768px and below
     margin-top: 35%;
     font-size: 40px;
     text-align: center;
+    text-shadow: 2px 2px 2px #000000; 
   }
   p {
     margin-bottom: 30px;
