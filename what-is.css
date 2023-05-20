@@ -276,3 +276,19 @@ Start of styles for screen widths 768px and below
   }
 
 }
+
+@media (max-height: 700px) {
+  .navigation-bar ul {
+    margin-top: 22px;
+  }
+  .navigation-bar ul li {
+    margin-bottom: -10px;
+  }
+  .app-store {
+    left: 5%;
+  }
+  .google-play {
+    left: 50%;
+  }
+
+}

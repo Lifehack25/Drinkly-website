@@ -140,13 +140,15 @@ Start of styles for screen widths 768px and below
     display: none;
   }
   .background-container {
+    position: relative;
     background-image: url("images/mobile-background2.png"); /* replace with your mobile background image */
-    background-position: center;
+    background-size: cover;
+    background-position: center top;
     background-repeat: no-repeat;
-    height: 1800px;
-    width: 100vw; /* Ensure the container covers the entire viewport width */
-    left: 0;
-    transform: none;
+    height: 100vh;  /* Change this */
+    width: 100vw;  /* Change this */
+    left: 50%;
+    transform: translateX(-50%);
   }
   .text-container-mobile {
     display: inline-block;
@@ -162,7 +164,7 @@ Start of styles for screen widths 768px and below
     margin-top: 35%;
     font-size: 40px;
     text-align: center;
-    text-shadow: 2px 2px 2px #000000; 
+    text-shadow: 2px 2px 2px #000000;
   }
   p {
     margin-bottom: 30px;
@@ -178,6 +180,7 @@ Start of styles for screen widths 768px and below
     width: 120px;
     margin-left: 35%;
     margin-top: 20px;
+    margin-bottom: 40px;
   }
   /* Hide the desktop navigation */
   .navigation-bar {
@@ -247,4 +250,13 @@ Start of styles for screen widths 768px and below
     transform: rotate(45deg) translate(-7px, -6px);
   }
 
+}
+
+@media (max-height: 700px) {
+  .navigation-bar ul {
+    margin-top: 30px;
+  }
+  .navigation-bar ul li {
+    margin-bottom: 20px;
+  }
 }

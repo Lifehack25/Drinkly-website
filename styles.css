@@ -232,13 +232,13 @@ Start of styles for screen widths 768px and below
     width: 100vw; /* Ensure the container covers the entire viewport width */
     left: 0;
     transform: none;
+    position: relative;
   }
   /* Hide the desktop navigation */
   .navigation-bar {
     display: none;
     position: fixed; /* Fixed position */
-    top: -1.2%; /* Align to the top */
-    left: 0; /* Align to the left */
+    margin: 0;
     width: 100%; /* Full viewport width */
     height: 23%;
     background: rgba(0, 0, 0, 0.8);
@@ -333,10 +333,39 @@ Start of styles for screen widths 768px and below
     border-radius: 10px;
   }
   .app-store {
-    top: 78%;
+    bottom: 13%;
   }
   .google-play {
-    top: 88%;
-  }  
-
+    bottom: 4%;
+  }
+}
+/* 
+==================================================
+MOBILE STYLES
+Start of styles for screen widths 768px and below 
+==================================================
+*/
+@media (max-height: 700px) {
+  
+  .background-container {
+    background-image: url(images/mobile-background-mini.png);
+  }
+  .app-store, .google-play {
+    height: 50px;
+  }
+  .app-store {
+    bottom: 15.5%;
+  }
+  .p1 {
+    top: 125px;
+    font-size: 30px;
+    line-height: 35px;
+    width: 250px;
+  }
+  .navigation-bar ul {
+    margin-top: -40px;
+  }
+  .navigation-bar ul li {
+    margin-bottom: -10px;
+  }
 }
