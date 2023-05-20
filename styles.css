@@ -354,13 +354,14 @@ Start of styles for screen widths 768px and below
     height: 50px;
   }
   .app-store {
-    bottom: 15.5%;
+    bottom: 14%;
   }
   .p1 {
     top: 125px;
-    font-size: 30px;
+    font-size: 28px;
     line-height: 35px;
     width: 250px;
+    font-weight: 1;
   }
   .navigation-bar ul {
     margin-top: -40px;
