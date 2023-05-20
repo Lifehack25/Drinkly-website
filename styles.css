@@ -322,7 +322,7 @@ Start of styles for screen widths 768px and below
     object-fit: contain;
   }
   .p1 {
-    top: 130px;
+    top: 15%;
     left: 4%;
   }
   .app-store, .google-play {
@@ -357,7 +357,7 @@ Start of styles for screen widths 768px and below
     bottom: 14%;
   }
   .p1 {
-    top: 125px;
+    top: 19%;
     font-size: 30px;
     line-height: 35px;
     width: 250px;
