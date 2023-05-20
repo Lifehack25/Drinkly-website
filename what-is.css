@@ -215,7 +215,7 @@ Start of styles for screen widths 768px and below
     left: 0; /* Align to the left */
     width: 100%; /* Full viewport width */
     height: 23%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     text-align: center; /* Center the text */
     z-index: 9998;
     border-bottom-left-radius: 150px;
