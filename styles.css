@@ -172,7 +172,7 @@ html, body, div, h1, h2, p, ul, li, a {
   position: absolute;
   left: 740px;
   display: grid;
-  grid-template-columns: 50px 315px;
+  grid-template-columns: 50px 310px;
 }
 .grid-container1 {
   top: 52%;
